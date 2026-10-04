@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pebble Beach 2026</title>
+<style>
+  :root {
+    --navy: #1F4E5F;
+    --navy-dark: #163A47;
+    --gold: #C9A24B;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --border: #E1DED4;
+    --text: #23292B;
+    --muted: #6B7275;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-text-size-adjust: 100%;
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 22px 16px 26px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 4px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  header p {
+    margin: 0;
+    color: #cfe0e6;
+    font-size: 0.95rem;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  section > h2 {
+    margin: 0;
+    font-size: 1.05rem;
+    padding: 14px 16px;
+    background: #EFEBE0;
+    border-bottom: 1px solid var(--border);
+    color: var(--navy-dark);
+  }
+  .section-body { padding: 12px 16px 16px; }
+  .round-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+  }
+  .round-card:last-child { margin-bottom: 0; }
+  .round-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .round-course { font-weight: 600; font-size: 1.02rem; }
+  .round-date { color: var(--muted); font-size: 0.88rem; }
+  .round-meta { margin-top: 6px; font-size: 0.9rem; color: var(--text); }
+  .round-meta div { margin: 2px 0; }
+  .label { color: var(--muted); }
+  .tag {
+    display: inline-block;
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-left: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 7px 8px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .3px; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .teamA { color: #1F4E5F; font-weight: 600; }
+  .teamB { color: #A15C2B; font-weight: 600; }
+  details summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-weight: 600;
+    background: #EFEBE0;
+    color: var(--navy-dark);
+    list-style: none;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary:after { content: " ▸"; }
+  details[open] summary:after { content: " ▾"; }
+  details .section-body { padding-top: 12px; }
+  .pill-row { display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  .pill {
+    flex: 1;
+    min-width: 140px;
+    background: #F0F6F5;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .pill .big { font-size: 1.15rem; font-weight: 700; color: var(--navy-dark); }
+  .pill .small { font-size: 0.75rem; color: var(--muted); }
+  .note {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.78rem;
+    padding: 18px 16px 30px;
+  }
+  .tbd { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Pebble Beach 2026</h1>
+  <p>October 14&ndash;18 &middot; Harding Park, Pasatiempo, Spyglass Hill, Pebble Beach, Pacific Grove, The Hay</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Roster</h2>
+    <div class="section-body">
+      <div class="pill-row">
+        <div class="pill"><div class="big">13.3</div><div class="small">Team A avg HCP</div></div>
+        <div class="pill"><div class="big">13.5</div><div class="small">Team B avg HCP</div></div>
+        <div class="pill"><div class="big">0.2</div><div class="small">Handicap gap</div></div>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <tr><th>Player</th><th>Team</th><th>2026 HCP</th></tr>
+          <tr><td>Sarun Charumilind</td><td class="teamA">A</td><td>14.3</td></tr>
+          <tr><td>Michael Detsky</td><td class="teamB">B</td><td>10.7</td></tr>
+          <tr><td>Jaime G&oacute;mez</td><td class="teamB">B</td><td>15.0</td></tr>
+          <tr><td>Deepak Palakshappa</td><td class="teamA">A</td><td>13.8</td></tr>
+          <tr><td>David Lee</td><td class="teamA">A</td><td>9.0</td></tr>
+          <tr><td>Joseph Lee</td><td class="teamB">B</td><td>13.4</td></tr>
+          <tr><td>Matt Warco</td><td class="teamB">B</td><td>14.8</td></tr>
+          <tr><td>Stephen Tai</td><td class="teamA">A</td><td>16.0</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Schedule</h2>
+    <div class="section-body">
+
+      <div class="round-card">
+        <div class="round-top">
+          <div class="round-course">TPC Harding Park</div>
+          <div class="round-date">Wed, Oct 14</div>
+        </div>
+        <div class="round-meta">
+          <div><span class="label">Tee time:</span> 2:00 PM <span class="tag">TBC</span></div>
+          <div><span class="label">Tees:</span> White/Red (6,145 yds, 69.4/121, par 72)</div>
+          <div><span class="label">Game:</span> Side bet &ndash; individual Stableford, front 9 / back 9 / overall</div>
+          <div><span class="label">Players:</span> <span class="tbd">TBC &ndash; not all 8 confirmed</span></div>
+        </div>
+      </div>
+
+      <div class="round-card">
+        <div class="round-top">
+          <div class="round-course">Pasatiempo</div>
+          <div class="round-date">Thu, Oct 15</div>
+        </div>
+        <div class="round-meta">
+          <div><span class="label">Tee times:</span> 12:50 PM and 1:00 PM</div>
+          <div><span class="label">Tees:</span> White (6,093 yds, 70.7/138, par 70)</div>
+          <div><span class="label">Game:</span> Fourball (teams of two, two balls, best ball) &middot; match play, net &middot; 2 matches</div>
+          <div><span class="label">Players:</span> All 8</div>
+        </div>
+      </div>
+
+      <div class="round-card">
+        <div class="round-top">
+          <div class="round-course">Spyglass Hill</div>
+          <div class="round-date">Fri, Oct 16</div>
+        </div>
+        <div class="round-meta">
+          <div><span class="label">Tee times:</span> 1:10 PM and 1:20 PM</div>
+          <div><span class="label">Tees:</span> White (6,150 yds, 71.8/133, par 72)</div>
+          <div><span class="label">Game:</span> Fourball (teams of two, two balls, best ball) &middot; match play, net &middot; 2 matches</div>
+          <div><span class="label">Players:</span> All 8</div>
+        </div>
+      </div>
+
+      <div class="round-card">
+        <div class="round-top">
+          <div class="round-course">Pebble Beach Golf Links</div>
+          <div class="round-date">Sat, Oct 17</div>
+        </div>
+        <div class="round-meta">
+          <div><span class="label">Tee times:</span> 1:10 PM and 1:20 PM</div>
+          <div><span class="label">Tees:</span> White (6,083 yds, 71.7/135, par 72)</div>
+          <div><span class="label">Game:</span> Singles &middot; match play, net &middot; 4 matches</div>
+          <div><span class="label">Players:</span> All 8</div>
+        </div>
+      </div>
+
+      <div class="round-card">
+        <div class="round-top">
+          <div class="round-course">Pacific Grove Golf Links</div>
+          <div class="round-date">Sun, Oct 18 (AM)</div>
+        </div>
+        <div class="round-meta">
+          <div><span class="label">Tee times:</span> 9:00 AM and 9:10 AM</div>
+          <div><span class="label">Tees:</span> Blue (5,727 yds, 68.1/116, par 70) &ndash; longest tee available, course tops out under 6,000 yds</div>
+          <div><span class="label">Game:</span> Singles &middot; match play, net &middot; 4 matches</div>
+          <div><span class="label">Players:</span> All 8</div>
+        </div>
+      </div>
+
+      <div class="round-card">
+        <div class="round-top">
+          <div class="round-course">The Hay <span style="color:var(--muted); font-weight:400; font-size:0.85rem;">(9-hole par-3)</span></div>
+          <div class="round-date">Sun, Oct 18 (PM)</div>
+        </div>
+        <div class="round-meta">
+          <div><span class="label">Tee times:</span> 4:50 PM and 5:00 PM</div>
+          <div><span class="label">Tees:</span> Single tee, 670 yds, par 27 (unrated)</div>
+          <div><span class="label">Game:</span> Team 2-best-balls, match play, net &middot; 1 match</div>
+          <div><span class="label">Players:</span> All 8</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <details>
+    <summary>Course handicaps</summary>
+    <div class="section-body">
+      <div class="table-scroll">
+        <table>
+          <tr>
+            <th>Player</th><th>HCP</th><th>Harding Park</th><th>Pasatiempo</th>
+            <th>Spyglass</th><th>Pebble Beach</th><th>Pacific Grove</th>
+          </tr>
+          <tr><td>Sarun Charumilind</td><td>14.3</td><td>13</td><td>18</td><td>17</td><td>17</td><td>13</td></tr>
+          <tr><td>Michael Detsky</td><td>10.7</td><td>9</td><td>14</td><td>12</td><td>12</td><td>9</td></tr>
+          <tr><td>Jaime G&oacute;mez</td><td>15.0</td><td>13</td><td>19</td><td>17</td><td>18</td><td>13</td></tr>
+          <tr><td>Deepak Palakshappa</td><td>13.8</td><td>12</td><td>18</td><td>16</td><td>16</td><td>12</td></tr>
+          <tr><td>David Lee</td><td>9.0</td><td>7</td><td>12</td><td>10</td><td>10</td><td>7</td></tr>
+          <tr><td>Joseph Lee</td><td>13.4</td><td>12</td><td>17</td><td>16</td><td>16</td><td>12</td></tr>
+          <tr><td>Matt Warco</td><td>14.8</td><td>13</td><td>19</td><td>17</td><td>17</td><td>13</td></tr>
+          <tr><td>Stephen Tai</td><td>16.0</td><td>15</td><td>20</td><td>19</td><td>19</td><td>15</td></tr>
+        </table>
+      </div>
+      <p class="note">The Hay is unrated (no course handicap). Full relative-handicap breakdown lives in the trip Excel.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Match play scoreboard</summary>
+    <div class="section-body">
+      <div class="table-scroll">
+        <table>
+          <tr><th>#</th><th>Course</th><th>Type</th><th>Team A</th><th>Team B</th><th>Winner</th></tr>
+          <tr><td>1</td><td>Pasatiempo</td><td>Fourball</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>2</td><td>Pasatiempo</td><td>Fourball</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>3</td><td>Spyglass Hill</td><td>Fourball</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>4</td><td>Spyglass Hill</td><td>Fourball</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>5</td><td>Pebble Beach GL</td><td>Singles</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>6</td><td>Pebble Beach GL</td><td>Singles</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>7</td><td>Pebble Beach GL</td><td>Singles</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>8</td><td>Pebble Beach GL</td><td>Singles</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>9</td><td>Pacific Grove</td><td>Singles</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>10</td><td>Pacific Grove</td><td>Singles</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>11</td><td>Pacific Grove</td><td>Singles</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>12</td><td>Pacific Grove</td><td>Singles</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+          <tr><td>13</td><td>The Hay</td><td>Team 2-ball</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">&mdash;</td></tr>
+        </table>
+      </div>
+      <p class="note">Pairings and results TBD &ndash; will update here once matches are set and rounds are played.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Individual scoring &amp; winnings</summary>
+    <div class="section-body">
+      <p class="note" style="margin-top:0;">Reward values not yet set (Gross Birdie / Eagle / Closest to Pin / Hole in One). Ryder Cup is $300 per player: winning team members each receive $300, losing team members each pay $300, based on the overall match-play result above.</p>
+      <div class="table-scroll">
+        <table>
+          <tr><th>Player</th><th>Team</th><th>Ryder Cup</th><th>Indiv. net</th><th>Total</th></tr>
+          <tr><td>Sarun Charumilind</td><td class="teamA">A</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td></tr>
+          <tr><td>Michael Detsky</td><td class="teamB">B</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td></tr>
+          <tr><td>Jaime G&oacute;mez</td><td class="teamB">B</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td></tr>
+          <tr><td>Deepak Palakshappa</td><td class="teamA">A</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td></tr>
+          <tr><td>David Lee</td><td class="teamA">A</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td></tr>
+          <tr><td>Joseph Lee</td><td class="teamB">B</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td></tr>
+          <tr><td>Matt Warco</td><td class="teamB">B</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td></tr>
+          <tr><td>Stephen Tai</td><td class="teamA">A</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td></tr>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <footer>
+    Pebble Beach 2026 &middot; snapshot generated from the trip planning spreadsheet &middot; refreshed as details are confirmed
+  </footer>
+
+</main>
+</body>
+</html>
